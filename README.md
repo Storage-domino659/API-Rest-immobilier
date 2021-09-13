@@ -12,9 +12,9 @@ Objectif
 Créer un microservice avec une API REST qui permet aux utilisateurs de réaliser toutes les fonctionnalités citées ci-dessus. Il n’est pas demandé de développer l’interface.
 
 Choix technologiques
-Langage : Python ou Javascript
-Framework : Choix libre (flask, express, ...)
-Base de données : Choix libre
+Langage : Python
+Framework : Flask
+Base de données : MySQL
 Pas de Front
 Livrable
 Transmettre le code sous la forme d’un repository git (sur github par exemple), le Readme contiendra toutes les instructions pour pouvoir le faire tourner en local.
@@ -25,3 +25,9 @@ de gestion de projet, cela devra être reflété dans l’historique Git
 Modèle de données utilisé
 Structuration de l’API REST
 Structuration/ Architecture du code
+
+Installation
+
+pip install -r requirement.md
+
+Sql install
