@@ -18,3 +18,5 @@ except mysql.connector.Error as err:
     print(err)
 # else:
 #       connexion.close()
+#     connexion.close()
+#     curseur.close()
