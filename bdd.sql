@@ -1,3 +1,4 @@
+DB:
 DROP DATABASE IF EXISTS etudedecasdsflow;
 CREATE DATABASE IF NOT EXISTS etudedecasdsflow CHARACTER SET 'utf8';
 
@@ -21,8 +22,17 @@ CREATE TABLE IF NOT EXISTS etudedecasdsflow.property (
     PRIMARY KEY (id)
 );
 
+CONTENT:
 INSERT INTO etudedecasdsflow.user (pseudo, password, dateOfBirth)
-VALUES ('domino', '4141', '1997-11-24');
+VALUES ('Martin', 'mdp1', '1997-11-24');
+INSERT INTO etudedecasdsflow.user (pseudo, password, dateOfBirth)
+VALUES ('Bob', 'mdp2', '1998-05-13');
+INSERT INTO etudedecasdsflow.user (pseudo, password, dateOfBirth)
+VALUES ('Lucien', 'mdp3', '1996-03-15');
 
 INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
-VALUES ('1', 'Loft Comfort', 'Super loft au coeur de Paris, vue sur la Tour Eiffel', 'Appartement', 'Paris', '3', 'Cuisine, Salon, Balcon');
+VALUES ('1', 'Loft Comfort', 'Super loft au coeur de Paris, vue sur la Tour Eiffel', 'Appartement', 'Paris', '3', 'Cuisine, Salon, Chambre');
+INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
+VALUES ('2', 'Loft Nul', 'Loft pas ouf', 'Appartement', 'Paris', '2', 'Cuisine, Chambre');
+INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
+VALUES ('3', 'Maison', 'Maison comfortable', 'Maison', 'Montpellier', '4', 'Cuisine, 2 Chambre, 2 salles de bain, salon');
