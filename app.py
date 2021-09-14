@@ -1,4 +1,5 @@
 from resources.bdd import *
+from datetime import datetime
 
 #User
 # GET
@@ -11,16 +12,15 @@ def find_user_id(pseudo, password):
     # print(userid)
     return userid
 
-
 def list_all_user():
     request = "SELECT * FROM user"
     curseur = connexion.cursor()
     curseur.execute(request)
     users = curseur.fetchall()
-    connexion.close()
-
+    activeuser =  []
     for user in users:
-        print(user)
+        activeuser += user[1]
+    print(activeuser)
 
 
 # POST
@@ -31,7 +31,6 @@ def modify_user(pseudo, password, field, value):
     curseur = connexion.cursor()
     request = f"UPDATE user SET {field} = '{value}'  WHERE id = '{currentUser}'";
     curseur.execute(request)
-    connexion.close()
 
 
 #Property
@@ -41,7 +40,6 @@ def list_all_property():
     curseur = connexion.cursor()
     curseur.execute(request)
     propertys = curseur.fetchall()
-    connexion.close()
 
     for property in propertys:
         print(property)
@@ -55,7 +53,6 @@ def list_all_property_by_user(pseudo, password):
     curseur = connexion.cursor()
     curseur.execute(request)
     propertys = curseur.fetchall()
-    connexion.close()
 
     for property in propertys:
         print(property)
@@ -66,7 +63,6 @@ def list_all_property_by_city(ville):
     curseur = connexion.cursor()
     curseur.execute(request)
     propertys = curseur.fetchall()
-    connexion.close()
 
     for property in propertys:
         print(property)
@@ -81,7 +77,6 @@ def add_property(pseudo, password, name, description, typeOfProperty, city, room
     reference = {"userid" : currentUser, "name" : name, "description" : description , "typeOfProperty" : typeOfProperty , "city" : city , "room" : room , "characteristicsOfRoom" : characteristicsOfRoom }
     request = ("INSERT INTO property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom) VALUES(%(userid)s, %(name)s, %(description)s, %(typeOfProperty)s, %(city)s, %(room)s, %(characteristicsOfRoom)s)", reference)
     curseur.execute(*request)
-    connexion.close()
 
 
 # POST
@@ -92,7 +87,6 @@ def modify_property(pseudo, password, propertyid, field, value):
     curseur = connexion.cursor()
     request = f"UPDATE property SET {field} = '{value}' WHERE userid = '{currentUser}' AND id = '{propertyid}'";
     curseur.execute(request)
-    connexion.close()
 
 
 # DELETE
@@ -102,8 +96,7 @@ def delete_property(pseudo, password, propertyid):
 
     curseur = connexion.cursor()
     request = f"DELETE FROM property WHERE userid = '{currentUser}' AND id = '{propertyid}'";
-    curseur.execute(request)
-    connexion.close()
+    curseur.execute(request) 
 
 
 # find_user_id('Lucien', 'mdp3')
@@ -116,3 +109,5 @@ def delete_property(pseudo, password, propertyid):
 # modify_user('Lucien', 'mdp3', 'pseudo', 'Lulu')
 # list_all_property_by_user('Lulu', 'mdp3')
 # delete_property('Lulu', 'mdp3', 25)
+# request = "SELECT * FROM user"
+# execQuery(request)
