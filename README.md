@@ -27,7 +27,27 @@ Structuration de l’API REST
 Structuration/ Architecture du code
 
 Installation
-
 pip install -r requirement.md
 
 Sql install
+Executer la DB et le CONTENT de bdd.sql dans MySQL
+
+Lancer WampServer ou autres solutions
+
+Changer user passeword dans bdd.py si nécessaire
+
+
+Je n'ai pas fais de doc précises mais un modèle de chaque commande a exécuté pour communiquer avec l'api sont présent sous les fonctions concernés dans user.py et property.py.
+Il faut éxécuter le dossier api.py afin de faire marcher l'api.
+
+
+Piste d'amélioration:
+- Utiliser autre chose que f-string pour empêcher injection de SQL dans la BDD
+- Cryptage mdp avec clée SSH (par exemple)
+- Ajouter des messages erreurs et confirmation lorsque un PUT POST OU DELETE se passe bien
+- Préciser à l'utilisateur ce qu'il manque lorsqu'il se trompe sur une requête
+- Ajouter un système de token ou de login pour pas que l'utilisateur ait a rentrer pseudo password a chaque requête (me parait plus logique de le construire coté client)
+- Permettre à l'utilisateur de modifier plusieurs data sur un appartement ou son profil en même temps (pour ca je verrai aussi a l'aide d'une interface front ou l'utilisateur a toutes les données qui lui sont retransmis et il a juste à modifier celles qu'il souhaite. Cela me paraissait moins logique sous forme de requête)
+- Interface graphique
+- Faire des testes afin de vérifier que toutes les fonctionnalités marchent (via Postman)
+- Rendre les Pseudos unique ou trouver une solution pour éviter les doublons afin d'avoir une db saine.

@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import errorcode
 
+# Connexion DB
 try:
     connexion = mysql.connector.connect(
     host="localhost",

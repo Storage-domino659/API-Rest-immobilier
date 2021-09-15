@@ -21,6 +21,7 @@ def execQuery(query):
             j+=1
     return resultSet
 
+#Permer de récupérer l'id du client.
 def find_user_id(pseudo, password):
     request = f"SELECT id FROM user WHERE pseudo = '{pseudo}' AND password  = '{password}'"
     curseur = connexion.cursor()
