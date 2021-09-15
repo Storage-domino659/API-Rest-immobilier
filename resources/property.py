@@ -14,6 +14,7 @@ class Property(Resource):
 
         return list_all_property_by_city(city)
         # GET : http://127.0.0.1:5000/property?city=city:
+        
 
     def put(self):
         pseudo = request.args.get('pseudo')

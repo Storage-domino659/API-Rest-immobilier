@@ -21,7 +21,7 @@ class User(Resource):
         dateOfBirth = request.args.get('dateOfBirth')
 
         add_user(pseudo, password, dateOfBirth)
-        # PUT : http://127.0.0.1:5000/property?pseudo=pseudo:&password=password:&dateOfBirth=dateOfBirth:
+        # PUT : http://127.0.0.1:5000/user?pseudo=pseudo:&password=password:&dateOfBirth=dateOfBirth:
 
     def post(self):
         pseudo = request.args.get('pseudo')

@@ -12,5 +12,6 @@ api.add_resource(User, '/user', methods=['GET', 'PUT', 'POST', 'DELETE'])
 api.add_resource(Propertys, '/propertys', methods=['GET',])
 api.add_resource(Property, '/property', methods=['GET', 'PUT', 'POST', 'DELETE'])
 
+# Lancement Appli
 if __name__ == '__main__':
     app.run()

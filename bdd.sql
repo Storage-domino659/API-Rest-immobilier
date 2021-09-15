@@ -33,6 +33,10 @@ VALUES ('Lucien', 'mdp3', '1996-03-15');
 INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
 VALUES ('1', 'Loft Comfort', 'Super loft au coeur de Paris, vue sur la Tour Eiffel', 'Appartement', 'Paris', '3', 'Cuisine, Salon, Chambre');
 INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
+VALUES ('1', 'Loft Moins Comfort', 'Super loft au coeur de Paris, vue sur la rue', 'Appartement', 'Paris', '3', 'Cuisine, Salon, Chambre');
+INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
+VALUES ('1', 'Loft Encors moin comfort', 'Super loft au coeur de Paris, vue sur un mure', 'Appartement', 'Paris', '3', 'Cuisine, Salon, Chambre');
+INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
 VALUES ('2', 'Loft Nul', 'Loft pas ouf', 'Appartement', 'Paris', '2', 'Cuisine, Chambre');
 INSERT INTO etudedecasdsflow.property (userId, name, description, typeOfProperty, city, room, characteristicsOfRoom)
 VALUES ('3', 'Maison', 'Maison comfortable', 'Maison', 'Montpellier', '4', 'Cuisine, 2 Chambre, 2 salles de bain, salon');
